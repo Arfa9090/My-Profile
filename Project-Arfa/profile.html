@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Saya</title>
+  <style>
+    :root {
+      --sunflower: #FCD116;
+      --skyblue: #4A90E2;
+      --leafgreen: #5B6842;
+      --sand: #EAE6DF;
+      --darkgray: #2C2C2C;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--sand);
+      color: var(--darkgray);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      padding: 32px;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, var(--skyblue), var(--leafgreen));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 96px;
+      font-weight: 700;
+    }
+
+    .hero-content h1 {
+      margin: 0 0 12px;
+      font-size: 2.8rem;
+    }
+
+    .hero-content p {
+      margin: 0;
+      line-height: 1.7;
+      max-width: 560px;
+      color: var(--leafgreen);
+    }
+
+    .btn-primary {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 28px;
+      background: var(--sunflower);
+      color: var(--darkgray);
+      font-weight: 700;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.18s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .section {
+      margin-top: 2rem;
+      padding: 28px;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.05);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: var(--darkgray);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .card {
+      background: var(--sand);
+      border: 1px solid rgba(91, 104, 66, 0.2);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      color: var(--leafgreen);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--darkgray);
+    }
+
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(44, 44, 44, 0.08);
+    }
+
+    .list li:last-child {
+      border-bottom: none;
+    }
+
+    .list strong {
+      color: var(--darkgray);
+      display: block;
+    }
+
+    .list span {
+      color: var(--leafgreen);
+    }
+
+    footer {
+      margin-top: 32px;
+      text-align: center;
+      color: rgba(44, 44, 44, 0.7);
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: 240px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <div class="hero-image">AR</div>
+      <div class="hero-content">
+        <h1>Halo, saya Arfa</h1>
+        <p>Saya pelajar SMKN 15 Jakarta. Saya sedang belajar membuat halaman web dan desain sederhana.</p>
+        <a href="#contact" class="btn-primary">Kontak Saya</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Tentang Saya</h2>
+      <p>Saya suka membuat halaman web, poster, dan konten digital. Saya masih belajar dan ingin terus mencoba ide baru dengan cara yang mudah dipahami.</p>
+      <div class="stats">
+        <div class="card">
+          <h3>Keahlian</h3>
+          <p>HTML/CSS dasar, desain sederhana, komunikasi.</p>
+        </div>
+        <div class="card">
+          <h3>Sekolah</h3>
+          <p>SMKN 15 Jakarta</p>
+        </div>
+        <div class="card">
+          <h3>Nilai</h3>
+          <p>Jujur, sabar, dan terus belajar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Portofolio Singkat</h2>
+      <ul class="list">
+        <li>
+          <strong>Web Sederhana</strong>
+          <span>Halaman profil atau tugas sekolah</span>
+        </li>
+        <li>
+          <strong>Poster Sekolah</strong>
+          <span>Desain visual yang sederhana</span>
+        </li>
+        <li>
+          <strong>Tulisan Pendek</strong>
+          <span>Konten yang mudah dibaca</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Hubungi Saya</h2>
+      <p>Kalau ingin ngobrol soal ide sederhana atau tugas sekolah, klik tombol di atas atau kirim email.</p>
+    </section>
+
+    <footer>
+      <p>Profil ini dibuat sederhana dan mudah dibaca.</p>
+    </footer>
+  </div>
+</body>
+</html>
